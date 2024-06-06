@@ -1,0 +1,66 @@
+"use strict";
+require("dotenv").config();
+
+module.exports = {
+    development: {
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME_DEVELOPMENT,
+        host: process.env.DB_HOST,
+        port: process.env.DB_PORT,
+        dialect: process.env.DB_DIAL,
+        migrationStorage: "sequelize",
+        migrationStorageTableName: "sequelizeMeta",
+        migrationStorageTableSchema: "public",
+        seederStorage: "sequelize",
+        seederStorageTableName: "sequelizeData",
+        pool: {
+            min: 0,
+            max: 5,
+            idle: 10000,
+            acquire: 30000,
+        },
+        logging: console.log,
+    },
+    test: {
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME_TEST,
+        host: process.env.DB_HOST,
+        port: process.env.DB_PORT,
+        dialect: process.env.DB_DIAL,
+        migrationStorage: "sequelize",
+        migrationStorageTableName: "sequelizeMeta",
+        migrationStorageTableSchema: "public",
+        seederStorage: "sequelize",
+        seederStorageTableName: "sequelizeData",
+        pool: {
+            min: 0,
+            max: 5,
+            idle: 10000,
+            acquire: 30000,
+        },
+        logging: console.log,
+    },
+    production: {
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME_PRODUCTION,
+        host: process.env.DB_HOST,
+        port: process.env.DB_PORT,
+        dialect: process.env.DB_DIAL,
+        migrationStorage: "sequelize",
+        migrationStorageTableName: "sequelizeMeta",
+        migrationStorageTableSchema: "public",
+        seederStorage: "sequelize",
+        seederStorageTableName: "sequelizeData",
+        pool: {
+            min: 0,
+            max: 5,
+            idle: 10000,
+            acquire: 30000,
+        },
+        logging: false,
+    },
+};
+
